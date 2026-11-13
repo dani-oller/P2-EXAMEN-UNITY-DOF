@@ -16,4 +16,11 @@ public class AudioModulator : MonoBehaviour
         audioSrc.volume = Random.Range(minVolume, maxVolume);
         audioSrc.Play();
     }
+
+    public void Play(float volume)
+    {
+        audioSrc.pitch = 1.0f;
+        audioSrc.volume = volume;
+        audioSrc.Play();
+    }
 }

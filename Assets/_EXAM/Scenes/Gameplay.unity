@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 553639072}
   - component: {fileID: 553639075}
   - component: {fileID: 553639074}
+  - component: {fileID: 553639076}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -416,8 +417,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1587702953}
-  - {fileID: 643833963}
   - {fileID: 664550795}
+  - {fileID: 643833963}
   m_Father: {fileID: 1982806855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -472,6 +473,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &553639076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553639071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 2811175033473572856, guid: c803a45497b9d174b99ba607156b910c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1876,8 +1894,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'SHOTS: 10'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5eab3b6644bebbb469247af99948cfdf, type: 2}
+  m_sharedMaterial: {fileID: -5325149089885360517, guid: 5eab3b6644bebbb469247af99948cfdf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2149,8 +2167,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: START
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5eab3b6644bebbb469247af99948cfdf, type: 2}
+  m_sharedMaterial: {fileID: -5325149089885360517, guid: 5eab3b6644bebbb469247af99948cfdf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2297,6 +2315,7 @@ MonoBehaviour:
   - {fileID: 4154853317198872808, guid: d07e6012ffb359d4bb7f50672849f483, type: 3}
   - {fileID: 4154853317198872808, guid: e2e03be2b7fc66644b322e843dc8d4d5, type: 3}
   - {fileID: 4154853317198872808, guid: 4e88354473dee6a45afed4cdb5b75b3a, type: 3}
+  - {fileID: 4154853317198872808, guid: 0415912cb7d64a140b2a5b49ea8485c0, type: 3}
   shotsText: {fileID: 1587702951}
   youWinUI: {fileID: 664550794}
   musicSnapshots:

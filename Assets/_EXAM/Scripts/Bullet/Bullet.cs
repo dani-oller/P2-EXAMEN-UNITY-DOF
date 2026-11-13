@@ -16,6 +16,11 @@ public class Bullet : MonoBehaviour
     private GameObject playerHit;
     [SerializeField]
     private GameObject enemyHit;
+    [SerializeField]
+    private GameObject impact;
+
+    [SerializeField]
+    private float knockBackAmount = 5f;
     public void Shoot(float shootForce, bool isFriendly = true)
     {
         rb.AddForce(this.transform.right * shootForce, ForceMode2D.Impulse);
@@ -27,12 +32,19 @@ public class Bullet : MonoBehaviour
     private const int playerLayer = 6;
     private const int enemyLayer = 8;
 
-    public void OnCollisionEnter2D(Collision2D collision){
+    public void OnCollisionEnter2D(Collision2D collision) 
+    {
         HealthSystem hs = collision.gameObject.GetComponent<HealthSystem>();
+        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+
         if (hs != null)
         {
             hs.TakeDamage(Damage);
+            if (rb != null)
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(this.transform.right * knockBackAmount, ForceMode2D.Impulse);
+
             Instantiate(IsFriendly ? enemyHit : playerHit, this.transform.position, Quaternion.identity, null);
+            AudioModulator impactAudio = Instantiate(impact, this.transform.position, Quaternion.identity, null).GetComponent<AudioModulator>();
         }
 
         SpawnImpactVfx(collision);

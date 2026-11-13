@@ -16,8 +16,6 @@ public class Bullet : MonoBehaviour
     private GameObject playerHit;
     [SerializeField]
     private GameObject enemyHit;
-    [SerializeField]
-    private GameObject impact;
 
     [SerializeField]
     private float knockBackAmount = 5f;
@@ -44,7 +42,6 @@ public class Bullet : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody2D>().AddForce(this.transform.right * knockBackAmount, ForceMode2D.Impulse);
 
             Instantiate(IsFriendly ? enemyHit : playerHit, this.transform.position, Quaternion.identity, null);
-            AudioModulator impactAudio = Instantiate(impact, this.transform.position, Quaternion.identity, null).GetComponent<AudioModulator>();
         }
 
         SpawnImpactVfx(collision);
